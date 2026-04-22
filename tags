@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/umar/Desktop/workstation/OSdev/BootLegacyFrimware/UEFI/UEFiRM-Zero-Boot/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(EFI_APP_PE)	Makefile	/^$(EFI_APP_PE): $(SRC:.c=.so)  $/;"	t
+%.o	Makefile	/^%.o : %.c $/;"	t
+%.so	Makefile	/^%.so:  %.o $/;"	t
+ARCH	Makefile	/^ARCH=$(shell uname -m)$/;"	m
+BUILDIR	Makefile	/^BUILDIR:=build $/;"	m
+CC	Makefile	/^CC=gcc $/;"	m
+CFLAGS	Makefile	/^CFLAGS=  -fno-stack-protector  -fpic -fshort-wchar  -mno-red-zone \\$/;"	m
+EFI_APP_PE	Makefile	/^EFI_APP_PE:=prolog.efi$/;"	m
+EFI_HEADER_INC	Makefile	/^EFI_HEADER_INC:=\/usr\/include\/efi$/;"	m
+EFI_LIKER_SCRIPT	Makefile	/^EFI_LIKER_SCRIPT:=$(HOSTLIBS)\/elf_$(ARCH)_efi.lds $/;"	m
+HOSTLIBS	Makefile	/^HOSTLIBS:=\/usr\/lib$/;"	m
+LD	Makefile	/^LD=ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS= $(USING_C_RUNTIME_0_FILE) -nostdlib  -znocombreloc		 \\$/;"	m
+OBJ	Makefile	/^OBJ=$(SRC:.c=.o) $/;"	m
+OBJCOPY	Makefile	/^OBJCOPY=objcopy$/;"	m
+OBJFLAGS	Makefile	/^OBJFLAGS= --only-section=.text                       \\$/;"	m
+SRC	Makefile	/^SRC=$(wildcard src\/efi\/*.c) $/;"	m
+UEFiRM-Zero-Boot	README.md	/^# UEFiRM-Zero-Boot$/;"	c
+USING_C_RUNTIME_0_FILE	Makefile	/^USING_C_RUNTIME_0_FILE:=$(HOSTLIBS)\/crt0-efi-$(ARCH).o $/;"	m
+all	Makefile	/^all: $(EFI_APP_PE) $/;"	t
+clean	Makefile	/^clean:  $/;"	t
+efi_main	src/efi/uefi_prolog.c	/^efi_main(EFI_HANDLE  imghdl,  EFI_SYSTEM_TABLE *systab)$/;"	f	typeref:typename:EFI_STATUS EFIAPI
+move2buildir	Makefile	/^define  move2buildir$/;"	m
+mproper	Makefile	/^mproper: clean $/;"	t
