@@ -30,6 +30,10 @@ UEFiRM-Zero-Boot	README.md	/^# UEFiRM-Zero-Boot$/;"	c
 USING_C_RUNTIME_0_FILE	Makefile	/^USING_C_RUNTIME_0_FILE:=$(HOSTLIBS)\/crt0-efi-$(ARCH).o $/;"	m
 all	Makefile	/^all: $(EFI_APP_PE) $/;"	t
 clean	Makefile	/^clean:  $/;"	t
-efi_main	src/efi/uefi_prolog.c	/^efi_main(EFI_HANDLE  imghdl,  EFI_SYSTEM_TABLE *systab)$/;"	f	typeref:typename:EFI_STATUS EFIAPI
+efi_main	src/gnu-efi/uefi_prolog.c	/^efi_main(EFI_HANDLE  imghdl,  EFI_SYSTEM_TABLE *systab)$/;"	f	typeref:typename:EFI_STATUS EFIAPI
+has_command	script/qemuefi.sh	/^has_command(){$/;"	f
+has_command	start	/^has_command(){$/;"	f
+launch_qemu	script/qemuefi.sh	/^launch_qemu(){$/;"	f
+launch_qemu	start	/^launch_qemu(){$/;"	f
 move2buildir	Makefile	/^define  move2buildir$/;"	m
 mproper	Makefile	/^mproper: clean $/;"	t

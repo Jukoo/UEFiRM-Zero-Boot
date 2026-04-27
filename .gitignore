@@ -53,3 +53,9 @@ dkms.conf
 
 # debug information files
 *.dwo
+tools.txt 
+tags 
+img/*.disk
+img/*.img
+img/*.iso
+img/baseufi.disk 
