@@ -68,7 +68,12 @@ $(EFI_APP_PE): $(SRC:.c=.so)
 	@$(LD) $< $(LDFLAGS) -o  $@
 
 
-.PHONY: clean mproper 
+
+.PHONY: clean mproper qemu
+
+qemu: 
+	$(info Launching  VM using Qemu) 
+	@sudo ./script/start_vm.sh 
 
 clean:  
 	$(warning no rule for $@) 
