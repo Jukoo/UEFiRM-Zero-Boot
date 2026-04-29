@@ -59,3 +59,4 @@ img/*.disk
 img/*.img
 img/*.iso
 img/baseufi.disk 
+build/* 

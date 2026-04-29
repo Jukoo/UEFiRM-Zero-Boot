@@ -18,7 +18,7 @@ declare BYTE_ARCH=${ARCH:4}
 
 readonly  BYTE_ARCH 
 readonly  EDK2_FULL_PATH=${EDK2_RPATH}${BYTE_ARCH}/${OVMF_FD} 
-
+readonly  IMG_DISK_FULL_PATH="${IMG_RPATH}${IMG_DISK}"
 has_command(){
   local exit_code; 
   [[ -n `command -v $1` ]] || {
@@ -35,7 +35,7 @@ has_command(){
 launch_qemu(){
    qemu-system-${ARCH}  -cpu qemu${ARCH:4} \
      -bios ${EDK2_FULL_PATH} \
-     -drive file=${IMG_DISK},if=ide \
+     -drive file=${IMG_DISK_FULL_PATH},format=raw,if=ide \
      -net none
 }
 

@@ -36,7 +36,7 @@ OBJFLAGS= --only-section=.text                       \
 
 
 
-SRC=$(wildcard src/efi/*.c) 
+SRC=$(wildcard efi/gnu/*.c) 
 OBJ=$(SRC:.c=.o) 
 EFI_APP_PE:=prolog.efi
 
