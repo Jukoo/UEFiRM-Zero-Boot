@@ -60,3 +60,4 @@ img/*.img
 img/*.iso
 img/baseufi.disk 
 build/* 
+img/baseufi.disk
